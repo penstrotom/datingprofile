@@ -51,6 +51,7 @@
 	 right: 1.5em;
 }
  .modal .modal-inner .modal-content .modal-content-inner {
+	 padding-left: 2em;
 	 padding-right: 2em;
 }
  .modal .modal-inner .modal-content .modal-content-inner h1, .modal .modal-inner .modal-content .modal-content-inner h2, .modal .modal-inner .modal-content .modal-content-inner h3, .modal .modal-inner .modal-content .modal-content-inner h4, .modal .modal-inner .modal-content .modal-content-inner h5, .modal .modal-inner .modal-content .modal-content-inner h6 {
