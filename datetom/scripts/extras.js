@@ -35,15 +35,21 @@ document.querySelector('.modal-content').addEventListener('click', function(e) {
 var today = new Date();
 var dateFormatOptions = { weekday: 'short', month: 'short', day: 'numeric' };
 var reservationDatesHTML = "";
-var newDate, newDateClass;
+var newDate, newDateClass, newDateExtraString, newDateAnchorElementStart, newDateAnchorElementEnd;
 for (i = 0; i < 7; ++i) {
   newDate = new Date();
   newDate.setDate(today.getDate() + i);
   newDateClass = '';
-  if (newDate.getDay() == 4 || newDate.getDay() == 5) {
+  newDateExtraString = ' Booked';
+  newDateAnchorElementStart = '';
+  newDateAnchorElementEnd = '';
+  if (newDate.getDay() == 4 || newDate.getDay() == 6) {
     newDateClass = ' reservation-date-label-free';
+    newDateExtraString = ' Reserve Now!';
+    newDateAnchorElementStart = '<a href="https://www.instagram.com/penstrotom/"';
+    newDateAnchorElementEnd = '</a>';
   }
-  reservationDatesHTML += '<span class=\"three columns reservation-date-label' + newDateClass + '\">' + newDate.toLocaleDateString("en-US", dateFormatOptions) + '</span>';
+  reservationDatesHTML += newDateAnchorElementStart + '<span class=\"twelve columns reservation-date-label' + newDateClass + '\">' + newDate.toLocaleDateString("en-US", dateFormatOptions) + newDateExtraString + '</span>' + newDateAnchorElementEnd;
 }
 
 document.querySelector('#reservations-dates').innerHTML = reservationDatesHTML;

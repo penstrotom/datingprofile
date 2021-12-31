@@ -1,4 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+
+
+@import 'https://fonts.googleapis.com/css?family=Luxurious+Roman';
  .modal {
 	 position: fixed;
 	 left: 0;
@@ -88,8 +90,48 @@
     margin-bottom: 0.75rem;
     font-weight: 600;
     letter-spacing: .1rem;
+	text-decoration: line-through;
 }
  
 .reservation-date-label.reservation-date-label-free {
     background: blueviolet;
+	text-decoration: none;
+}
+
+.menu-background {
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+body {
+	color:#EEE;
+	font-family: 'Luxurious Roman';
+	font-size: large;
+}
+
+body .modal {
+	color: #222;
+	font-size: medium;
+}
+
+a.button {
+	color: #EEE;
+}
+
+.button-primary {
+	color: white;
+	background-color: #000000b5 !important;
+	border-color: #dfc984 !important;
+	font-size: large;
+}
+
+#open-reservations {
+	display: block;
 }
